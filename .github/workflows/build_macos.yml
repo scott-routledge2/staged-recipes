@@ -22,4 +22,4 @@ jobs:
           cache: false
 
       - name: Build
-        run: pixi run build-osx
+        run: pixi run -e osx build-osx osx64
