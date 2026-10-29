@@ -1,3 +1,7 @@
+import os
+os.environ["PMIX_HOSTNAME"] = "localhost"
+
+
 from mpi4py import MPI
 import sys
 
