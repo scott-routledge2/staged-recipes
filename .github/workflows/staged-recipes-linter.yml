@@ -2,13 +2,13 @@ name: staged-recipes-linter
 
 on:
   merge_group:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - labeled
-      - unlabeled
+  # pull_request:
+  #   types:
+  #     - opened
+  #     - synchronize
+  #     - reopened
+  #     - labeled
+  #     - unlabeled
 
 # this workflow potentially runs untrusted code via python's `eval`
 # so we can only give it access to a read-only github token
