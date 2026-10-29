@@ -1,8 +1,12 @@
-import os
-import pandas as pd
-import bodosql
+from mpi4py import MPI
+import sys
 
-df = pd.DataFrame({"A": [1, 2, 3]})
-bc = bodosql.BodoSQLContext({"TABLE1": df})
-res = bc.sql("SELECT SUM(A) as OUTPUT FROM TABLE1")
-assert res["OUTPUT"].iloc[0] == 6
+print(MPI.Get_library_version())
+
+comm = MPI.COMM_SELF.Spawn(
+    sys.executable,
+    args=["-c", "pass"],
+    maxprocs=1,
+)
+
+comm.Disconnect()
