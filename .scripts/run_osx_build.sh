@@ -71,7 +71,6 @@ if [[ "${OSX_SDK_DIR:-}" == "" ]]; then
     /usr/bin/sudo mkdir -p "${OSX_SDK_DIR}"
     /usr/bin/sudo chown "${USER}" "${OSX_SDK_DIR}"
   fi
-else
 fi
 
 echo -e "\n\nRunning the build setup script."
