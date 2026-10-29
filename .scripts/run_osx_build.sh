@@ -72,13 +72,6 @@ if [[ "${OSX_SDK_DIR:-}" == "" ]]; then
     /usr/bin/sudo chown "${USER}" "${OSX_SDK_DIR}"
   fi
 else
-  if tmpf=$(mktemp "$OSX_SDK_DIR" tmp.XXXXXXXX 2>/dev/null); then
-      rm -f "$tmpf"
-      echo "OSX_SDK_DIR is writeable without sudo, continuing"
-  else
-      echo "User-provided OSX_SDK_DIR is not writeable for current user! Aborting"
-      exit 1
-  fi
 fi
 
 echo -e "\n\nRunning the build setup script."
