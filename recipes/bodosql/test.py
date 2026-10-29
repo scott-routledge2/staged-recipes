@@ -1,10 +1,5 @@
 import os
 import pandas as pd
-
-os.environ["BODOSQL_CPP_BACKEND"] = "1"
-os.environ["BODOSQL_CPP_BACKEND_FALLBACK"] = "0"
-os.environ["BODO_DATAFRAME_LIBRARY_RUN_PARALLEL"] = "0"
-
 import bodosql
 
 df = pd.DataFrame({"A": [1, 2, 3]})
